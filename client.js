@@ -7,6 +7,16 @@ function closeNav() {
   document.getElementById("hamMenu").style.width = "0";
 }
 
+//TODO Make sure the hamburger menu closes when changing desktop to mobile
+
+function closeNavIfOpen() {
+  if (window.innerWidth > 768) {
+    document.getElementById("hamMenu").style.width = "0";
+  }
+}
+
+window.addEventListener("resize", closeNavIfOpen);
+
 //TODO Create a toggle
 function toggleDarkMode() {
   document.body.classList.toggle("darkMode");

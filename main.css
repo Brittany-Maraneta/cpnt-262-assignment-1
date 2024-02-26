@@ -3,6 +3,21 @@ body {
   height: 200vh;
 }
 
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 30px;
+}
+
+p.header {
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -12,15 +27,15 @@ body {
 
 /* Navbar */
 nav {
-  background-color: hsl(7, 35%, 90%);
+  background-color: hsl(6, 20%, 81%);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  display: flex; /* Use flexbox layout */
-  align-items: center; /* Vertically center the items */
+  display: flex;
+  align-items: center;
 }
 
 .darkMode nav {
@@ -84,7 +99,7 @@ nav {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: hsl(7, 35%, 90%);
+  background-color: hsl(6, 20%, 81%);
   color: hsl(0, 0%, 0%);
   padding: 10px 15px;
   border: none;
@@ -149,11 +164,11 @@ nav {
 }
 .darkMode {
   background-color: hsl(0, 0%, 20%);
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 
 header {
-  background-image: url("https://images.pexels.com/photos/2088206/pexels-photo-2088206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: url("https://images.pexels.com/photos/739349/pexels-photo-739349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
@@ -166,13 +181,14 @@ header {
 .scrollButton {
   background-color: hsl(0, 35%, 94%);
   color: hsl(0, 0%, 0%);
-  padding: 15px 25px;
+  padding: 10px 15px;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   bottom: 150px;
   cursor: pointer;
   border-radius: 20px;
+  border: none;
 }
 
 .scrollButton:hover {
@@ -180,14 +196,8 @@ header {
   color: hsl(0, 0%, 100%);
 }
 
-/*logo*/
-.svg-element {
-  fill: hsl(0, 0%, 100%);
-  transition: fill 0.3s ease;
-}
-
 .svg-element:hover {
-  fill: hsl(350, 100%, 88%);
+  fill: hsl(0, 55%, 85%);
   transition: 0.3s;
 }
 
@@ -196,7 +206,7 @@ header {
 }
 
 .svg-name:hover {
-  fill: hsl(350, 100%, 88%);
+  fill: hsl(0, 35%, 94%);
   transition: 0.3s;
 }
 
@@ -214,4 +224,10 @@ header {
 
 .image-animation {
   animation: fadeInOut 10s infinite;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (min-width: 769px) {
 }
