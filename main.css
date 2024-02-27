@@ -1,6 +1,7 @@
 body {
   background-color: hsl(7, 35%, 90%);
-  height: 400vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1.main {
@@ -357,6 +358,10 @@ header {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+
+  body {
+    margin: auto;
+  }
 }
 
 /* carousel */
@@ -382,6 +387,8 @@ header {
     max-width: 600px;
     max-height: 700px;
     margin-top: 5em;
+    margin-bottom: 2em;
+    justify-content: center;
   }
 }
 
