@@ -1,6 +1,6 @@
 body {
   background-color: hsl(7, 35%, 90%);
-  height: 200vh;
+  height: 400vh;
 }
 
 h1 {
@@ -36,14 +36,15 @@ nav {
   top: 0;
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 .darkMode nav {
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(0, 1%, 27%);
 }
 
 .darkMode .openbtn {
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(0, 1%, 27%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -226,8 +227,146 @@ header {
   animation: fadeInOut 10s infinite;
 }
 
-@media (max-width: 768px) {
+/* cards */
+.card-container {
+  text-align: center;
 }
 
-@media (min-width: 769px) {
+.maincard {
+  /* font-family: "Montserrat", Arial, sans-serif; */
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px auto;
+  min-width: 230px;
+  max-width: 330px;
+  color: hsl(0, 0%, 100%);
+  text-align: left;
+  font-size: 16px;
+  background: hsl(0, 0%, 0%);
+  justify-content: center;
+  margin-left: 10em;
+}
+
+.maincard *,
+.snip1577:before,
+.snip1577:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.maincard img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  height: auto;
+}
+
+.maincard:before,
+.maincard:after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  content: "";
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0;
+}
+
+.maincard:before {
+  width: 0;
+  height: 1px;
+}
+
+.maincard:after {
+  height: 0;
+  width: 1px;
+}
+
+.maincard figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px 20px;
+}
+
+.maincard h3,
+.maincard h4 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: normal;
+  opacity: 0;
+}
+
+.maincard h4 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.maincard:hover img,
+.maincard.hover img {
+  zoom: 1;
+  filter: alpha(opacity=20);
+  -webkit-opacity: 0.2;
+  opacity: 0.2;
+}
+
+.maincard:hover:before,
+.maincard.hover:before,
+.maincard:hover:after,
+.maincard.hover:after {
+  opacity: 1;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.maincard:hover:before,
+.maincard.hover:before {
+  width: 40px;
+}
+
+.maincard:hover:after,
+.maincard.hover:after {
+  height: 40px;
+}
+
+.maincard:hover h3,
+.maincard.hover h3,
+.maincard:hover h4,
+.maincard.hover h4 {
+  opacity: 1;
+}
+
+.maincard:hover h3,
+.maincard.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.maincard:hover h4,
+.maincard.hover h4 {
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+
+.item {
+  position: relative;
+}
+
+.item a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .maincard {
+    max-width: 1em;
+    max-height: 20em;
+  }
 }
