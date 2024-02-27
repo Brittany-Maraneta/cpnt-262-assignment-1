@@ -56,13 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       counter++;
     }
-    carouselSlide.style.transition = "opacity 0.5s ease-in-out";
-    carouselSlide.style.opacity = 0;
-    setTimeout(() => {
-      carouselSlide.style.transition = "none";
-      carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-      carouselSlide.style.opacity = 1;
-    }, 500);
+    carouselSlide.style.transition = "transform 0.5s ease-in-out";
+    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
   }
 
   carouselSlide.style.transform = `translateX(${-size * counter}px)`;

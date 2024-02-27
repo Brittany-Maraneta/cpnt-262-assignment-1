@@ -9,27 +9,28 @@ h1.main {
 }
 
 h2.text {
-  color: black;
+  color: hsl(0, 0%, 0%);
 }
 
 h3.text {
-  color: black;
-  text-align: center;
-}
-
-h3.text {
-  color: black;
+  color: hsl(0, 0%, 0%);
   text-align: center;
 }
 
 h4.text {
-  color: black;
+  color: hsl(0, 0%, 0%);
   text-align: center;
 }
 
 h2 {
   text-align: center;
   font-size: 30px;
+}
+
+.darkMode h3 {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 p.header {
@@ -359,15 +360,16 @@ header {
 }
 
 /* carousel */
-.carousel-container {
-  width: 60%;
-  margin: 0 auto;
-  overflow: hidden;
+.carousel-slide {
+  margin-top: 5em;
+  display: flex;
+  width: 40%;
 }
 
-.carousel-slide {
-  display: flex;
+.carousel-slide img {
+  flex: 0 0 auto;
   width: 100%;
+  height: auto;
 }
 
 .carousel-slide img {
@@ -377,8 +379,8 @@ header {
 
 @media only screen and (max-width: 600px) {
   .carousel-container {
-    max-width: 20em;
-    max-height: 30em;
+    max-width: 600px;
+    max-height: 700px;
     margin-top: 5em;
   }
 }
