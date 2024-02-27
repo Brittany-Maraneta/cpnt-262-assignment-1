@@ -266,11 +266,13 @@
           />
         </svg>
       </div>
-      <h1>Travel Portfolio</h1>
+
+      <h1 class="main">Travel Portfolio</h1>
       <p class="header">
         I am a traveler by nature and love to explore everything and everywhere!
         Explore with me through my gallery and blogs!
       </p>
+
       <button class="scrollButton" onclick="scrollWin()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -284,54 +286,83 @@
     </header>
 
     <div class="container">
-      <h2>Experiences</h2>
-
       <figure class="maincard">
-        <img src="IMG_7964.jpg" alt="vegas" />
+        <a href="#"><img src="/images/IMG_7964.jpg" alt="vegas" /></a>
         <figcaption>
-          <h3><b>JR. Web Developer</b></h3>
-          <h4><i>Front & Back End</i></h4>
-          <h4><b>Languages:</b></h4>
-          <h4 ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-          </h4>
-          <h4><b>Programs:</b></h4>
-          <h4 ul>
-            <li>Figma</li>
-            <li>Adobe</li>
-            <li>GitHub</li>
-            <li>NodeJS</li>
-          </h4>
+          <h2><b>About</b></h2>
         </figcaption>
       </figure>
       <figure class="maincard">
-        <img src="mexico2.jpg" alt="mexico" />
+        <a href="#"
+          ><img src="/images/mexico2.jpg" alt="mexico" width="500" height="600"
+        /></a>
         <figcaption>
-          <h3><b>Photographer & Videographer</b></h3>
-
-          <h4 ul>
-            <b>Programs:</b>
-            <li>Canva</li>
-            <li>Figma</li>
-            <li>Adobe; Photoshop, Illustrator & Premiere</li>
-          </h4>
+          <h2><b>Portfolio</b></h2>
         </figcaption>
       </figure>
       <figure class="maincard">
-        <img src="philippines1.jpg" alt="phillippines" />
+        <a href="#"
+          ><img src="images/lake1.jpg" alt="lake" width="500" height="900"
+        /></a>
         <figcaption>
-          <h3><b>Designer</b></h3>
-          <h4><i>Media Artist & Technology</i></h4>
-          <h4 ul>
-            <li>Installations</li>
-            <li>Sound Work</li>
-            <li>Breadboard with Arduino experience & Processing</li>
-          </h4>
+          <h2><b>Blog</b></h2>
         </figcaption>
       </figure>
     </div>
+
+    <h2><b>BLAH</b></h2>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img
+          src="https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Image 1"
+        />
+        <img
+          src="https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Image 2"
+        />
+        <img
+          src="https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Image 3"
+        />
+        <img
+          src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Image 4"
+        />
+        <img
+          src="https://images.pexels.com/photos/2104152/pexels-photo-2104152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Image 5"
+        />
+      </div>
+    </div>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+      <form action="#" class="form-container">
+        <h2 class="text">Hello, Contact Me!</h2>
+
+        <h3 class="text">Is this a booking?</h3>
+        <div class="checkbox-container">
+          <input type="checkbox" id="myCheck" onclick="myFunction()" />
+        </div>
+
+        <h4 class="text">
+          <p id="text" style="display: none">Continue on to message!</p>
+        </h4>
+        <br />
+        <label for="msg"><b>Message:</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      <p class="footer">&copy; COPYRIGHT 2024 BMARAS</p>
+    </footer>
   </body>
 </html>
