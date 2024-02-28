@@ -3,6 +3,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
+  width: 100vw;
 }
 
 h1.main {
