@@ -361,13 +361,12 @@ header {
   .maincard {
     max-width: 2em;
     max-height: 20em;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    align-items: center;
+    margin-top: 0em;
+    margin-bottom: 5em;
     justify-content: center;
     display: block;
-    margin: auto;
-    column-gap: 5em;
+    margin: 3em auto;
+    position: relative;
   }
 
   p.header {
@@ -378,15 +377,11 @@ header {
     margin-right: 2em;
     background-color: hsl(0, 0%, 0%, 10%);
   }
-}
 
-@media only screen and (max-width: 780px) {
-  .maincard {
-    max-width: 1em;
-    max-height: 1em;
-    margin-top: 0;
-    margin-bottom: 0;
-    align-items: center;
+  body {
+    background-color: hsl(7, 35%, 90%);
+    overflow-x: hidden;
+    margin: 0;
   }
 }
 
