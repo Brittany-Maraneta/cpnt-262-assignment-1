@@ -5,8 +5,9 @@ body {
 }
 
 h1.main {
-  color: hsl(0, 0%, 100%);
+  color: hsl(9, 66%, 94%);
   font-size: 30px;
+  margin-top: -3em;
 }
 
 h2.text {
@@ -35,8 +36,12 @@ h2 {
 }
 
 p.header {
-  color: hsl(0, 0%, 100%);
+  color: hsl(7, 50%, 93%);
   font-size: 20px;
+  justify-content: center;
+  margin-left: 10em;
+  margin-right: 10em;
+  background-color: hsl(0, 0%, 0%, 10%);
 }
 
 /* Reset */
@@ -190,7 +195,7 @@ nav {
 }
 
 header {
-  background-image: url("https://images.pexels.com/photos/739349/pexels-photo-739349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: url("https://images.pexels.com/photos/2425781/pexels-photo-2425781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
@@ -365,31 +370,56 @@ header {
 }
 
 /* carousel */
-.carousel-slide {
-  margin-top: 5em;
+.container-carousel {
+  width: 500px;
+  height: 500px;
   display: flex;
-  width: 40%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.carousel-slide img {
-  flex: 0 0 auto;
+.container-carousel img {
   width: 100%;
-  height: auto;
+  z-index: -2;
 }
 
-.carousel-slide img {
-  width: 100%;
-  height: auto;
+button.carousel {
+  height: 10%;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 1em;
+  display: flex;
 }
 
-@media only screen and (max-width: 600px) {
-  .carousel-container {
-    max-width: 600px;
-    max-height: 700px;
-    margin-top: 5em;
-    margin-bottom: 2em;
-    justify-content: center;
-  }
+button .arrow {
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  transition: transform 0.3s ease-out;
+  outline: none;
+}
+
+#right-btn {
+  margin: auto 0 auto -2em;
+}
+
+#right-btn .arrow {
+  transform: rotate(-45deg);
+}
+
+#left-btn {
+  z-index: 0;
+  margin: auto -2em auto 0;
+}
+
+#left-btn .arrow {
+  transform: rotate(135deg);
 }
 
 /* Textbox for chat */
@@ -405,6 +435,7 @@ header {
   right: 28px;
   width: 280px;
   margin-bottom: 5em;
+  justify-content: center;
 }
 
 .chat-popup {
@@ -416,13 +447,13 @@ header {
   z-index: 9;
 }
 
-.form-container {
+.form {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
-.form-container textarea {
+.form textarea {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -432,12 +463,12 @@ header {
   min-height: 200px;
 }
 
-.form-container textarea:focus {
+.form textarea:focus {
   background-color: #ddd;
   outline: none;
 }
 
-.form-container .btn {
+.form .btn {
   background-color: hsl(6, 20%, 81%);
   color: hsl(0, 0%, 0%);
   padding: 16px 20px;
@@ -448,17 +479,17 @@ header {
   opacity: 0.8;
 }
 
-.form-container .cancel {
+.form .cancel {
   background-color: hsl(0, 0%, 33%);
   color: hsl(0, 0%, 100%);
 }
 
-.form-container .btn:hover,
+.form .btn:hover,
 .open-button:hover {
   opacity: 1;
 }
 
-.checkbox-container {
+.checkbox {
   text-align: center;
 }
 

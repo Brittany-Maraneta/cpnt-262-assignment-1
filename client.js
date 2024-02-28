@@ -8,7 +8,6 @@ function closeNav() {
 }
 
 //TODO Make sure the hamburger menu closes when changing desktop to mobile
-
 function closeNavIfOpen() {
   if (window.innerWidth > 768) {
     document.getElementById("hamMenu").style.width = "0";
@@ -22,7 +21,7 @@ function toggleDarkMode() {
   document.body.classList.toggle("darkMode");
 }
 
-//TODO hide the button from 1 click to go to the next section
+//TODO scroll button and hide the button from 1 click to go to the next section
 function scrollWin() {
   window.scrollBy(0, 600);
   document.querySelector(".scrollButton").remove();
@@ -42,28 +41,48 @@ function scrollWin() {
   window.scrollBy(0, 660);
 }
 
-//TODO create a carousel that loops forever
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselSlide = document.querySelector(".carousel-slide");
-  const images = document.querySelectorAll(".carousel-slide img");
+//TODO create a carousel
+const img = document.getElementById("carousel");
+const rightBtn = document.getElementById("right-btn");
+const leftBtn = document.getElementById("left-btn");
 
-  let counter = 0;
-  const size = images[0].clientWidth;
+let pictures = [
+  "https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 
-  function nextSlide() {
-    if (counter >= images.length - 1) {
-      counter = 0;
-    } else {
-      counter++;
-    }
-    carouselSlide.style.transition = "transform 0.5s ease-in-out";
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+  "https://images.pexels.com/photos/586687/pexels-photo-586687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+
+  "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+
+  "https://images.pexels.com/photos/1076240/pexels-photo-1076240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+
+  "https://images.pexels.com/photos/2798477/pexels-photo-2798477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+];
+
+img.src = pictures[0];
+let position = 0;
+
+const moveRight = () => {
+  if (position >= pictures.length - 1) {
+    position = 0;
+    img.src = pictures[position];
+    return;
   }
+  img.src = pictures[position + 1];
+  position++;
+};
 
-  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+const moveLeft = () => {
+  if (position < 1) {
+    position = pictures.length - 1;
+    img.src = pictures[position];
+    return;
+  }
+  img.src = pictures[position - 1];
+  position--;
+};
 
-  setInterval(nextSlide, 3000);
-});
+rightBtn.addEventListener("click", moveRight);
+leftBtn.addEventListener("click", moveLeft);
 
 // TODO make a chat popup
 function openForm() {

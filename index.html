@@ -285,15 +285,11 @@
       </button>
     </header>
 
-    <div class="carousel-container">
-      <div class="carousel-slide">
-        <img src="images/full_greece.jpg" alt="Image 1" />
-        <img src="images/mexico1.jpg" alt="Image 2" />
-        <img src="images/mountains2.jpg" alt="Image 3" />
-        <img src="images/philippines1.jpg" alt="Image 4" />
-        <img src="images/sky2.jpg" alt="Image 5" />
-        <img src="images/philippines2.jpg" alt="Image 6" />
-      </div>
+    <div class="container-carousel">
+      <button class="carousel" id="left-btn"><i class="arrow"></i></button>
+
+      <img id="carousel" src="" alt="" />
+      <button class="carousel" id="right-btn"><i class="arrow"></i></button>
     </div>
 
     <div class="container">
@@ -324,11 +320,11 @@
     <button class="open-button" onclick="openForm()">Contact</button>
 
     <div class="chat-popup" id="myForm">
-      <form action="#" class="form-container">
+      <form action="#" class="form">
         <h2 class="text">Hello, Contact Me!</h2>
 
         <h3 class="text">Is this a booking?</h3>
-        <div class="checkbox-container">
+        <div class="checkbox">
           <input type="checkbox" id="myCheck" onclick="myFunction()" />
         </div>
 
