@@ -2,6 +2,7 @@ body {
   background-color: hsl(7, 35%, 90%);
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
 }
 
 h1.main {
@@ -360,12 +361,32 @@ header {
   .maincard {
     max-width: 2em;
     max-height: 20em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    column-gap: 5em;
   }
 
-  body {
-    margin: auto;
+  p.header {
+    color: hsl(7, 50%, 93%);
+    font-size: 15px;
+    justify-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    background-color: hsl(0, 0%, 0%, 10%);
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .maincard {
+    max-width: 1em;
+    max-height: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
   }
 }
 
@@ -420,6 +441,24 @@ button .arrow {
 
 #left-btn .arrow {
   transform: rotate(135deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .container-carousel {
+    max-width: 20em;
+    max-height: 18em;
+    margin-top: 8em;
+    margin-bottom: 8em;
+    align-items: center;
+  }
+
+  #left-btn {
+    font-size: 1px;
+  }
+
+  #right-btn {
+    font-size: 1px;
+  }
 }
 
 /* Textbox for chat */
@@ -496,6 +535,32 @@ button .arrow {
 .darkMode .open-button {
   background-color: hsl(0, 8%, 93%);
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 8px 8px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+    margin-bottom: 5em;
+  }
+
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    justify-content: center;
+  }
 }
 
 footer {
