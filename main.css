@@ -379,7 +379,7 @@ header {
     background-color: hsl(0, 0%, 0%, 10%);
   }
 
-  body {
+  .body {
     background-color: hsl(7, 35%, 90%);
     overflow-x: hidden;
     margin: 0;
@@ -537,22 +537,23 @@ button .arrow {
   .open-button {
     background-color: #555;
     color: white;
-    padding: 8px 8px;
+    padding: 10px 5px;
     border: none;
     cursor: pointer;
     opacity: 0.8;
     position: fixed;
     bottom: 23px;
     right: 28px;
-    width: 280px;
+    width: 120px;
     margin-bottom: 5em;
+    margin-top: 10em;
   }
 
   .chat-popup {
     display: none;
     position: fixed;
-    bottom: 0;
-    right: 0px;
+    bottom: 80px;
+    right: 10px;
     border: 3px solid #f1f1f1;
     z-index: 9;
     justify-content: center;
@@ -568,7 +569,7 @@ footer {
   background-color: hsl(6, 20%, 81%);
   color: hsl(0, 0%, 0%);
   text-align: center;
-  padding-top: 2em;
+  padding-top: 1.5em;
 }
 
 .darkMode footer {
