@@ -4,6 +4,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   width: 100vw;
+  height: 400vh;
 }
 
 h1.main {
