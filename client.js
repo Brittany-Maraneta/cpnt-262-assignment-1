@@ -1,3 +1,5 @@
+"use strict";
+
 //TODO Create a Nav Bar that is hamburger menu always. Make sure its sticky
 function openNav() {
   document.getElementById("hamMenu").style.width = "100vw";

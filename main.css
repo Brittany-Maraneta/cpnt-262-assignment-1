@@ -11,6 +11,7 @@ h1.main {
   color: hsl(10, 69%, 87%);
   font-size: 30px;
   margin-top: -3em;
+  font-family: "Cedarville", cursive;
 }
 
 h2.text {
@@ -66,6 +67,7 @@ nav {
   display: flex;
   align-items: center;
   z-index: 1000;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .darkMode nav {
@@ -273,6 +275,7 @@ header {
   margin-left: 10em;
   margin-top: 10em;
   margin-bottom: 10em;
+  font-family: "Cedarville", cursive;
 }
 
 .maincard *,
@@ -385,6 +388,7 @@ header {
     overflow-x: hidden;
     margin: 0;
     width: 100%;
+    height: 350vh;
   }
 }
 
