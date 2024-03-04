@@ -43,46 +43,46 @@ function scrollWin() {
 
 //TODO create a carousel
 const img = document.getElementById("carousel");
-const rightBtn = document.getElementById("right-btn");
-const leftBtn = document.getElementById("left-btn");
 
 let pictures = [
-  "https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  {
+    src: "./images/full_greece.jpg",
+    alt: "Greece View",
+  },
 
-  "https://images.pexels.com/photos/586687/pexels-photo-586687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  {
+    src: "./images/lake1.jpg",
+    alt: "Camping Lake View",
+  },
 
-  "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  {
+    src: "./images/mexico1.jpg",
+    alt: "Mexico",
+  },
 
-  "https://images.pexels.com/photos/1076240/pexels-photo-1076240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  {
+    src: "./images/mountains2.jpg",
+    alt: "Canmore AB",
+  },
 
-  "https://images.pexels.com/photos/2798477/pexels-photo-2798477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  {
+    src: "./images/philippines1.jpg",
+    alt: "Philippines",
+  },
+
+  { src: "./images/philippines2.jpg", alt: "Philippines" },
+  { src: "./images/sky2.jpg", alt: "Calgary" },
 ];
 
-img.src = pictures[0];
 let position = 0;
 
-const moveRight = () => {
-  if (position >= pictures.length - 1) {
-    position = 0;
-    img.src = pictures[position];
-    return;
-  }
-  img.src = pictures[position + 1];
-  position++;
-};
+function changeImage() {
+  position = (position + 1) % pictures.length;
+  img.src = pictures[position].src;
+  img.alt = pictures[position].alt;
+}
 
-const moveLeft = () => {
-  if (position < 1) {
-    position = pictures.length - 1;
-    img.src = pictures[position];
-    return;
-  }
-  img.src = pictures[position - 1];
-  position--;
-};
-
-rightBtn.addEventListener("click", moveRight);
-leftBtn.addEventListener("click", moveLeft);
+setInterval(changeImage, 3000);
 
 // TODO make a chat popup
 function openForm() {
